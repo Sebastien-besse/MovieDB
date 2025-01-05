@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct TVShow: Identifiable{
     let id = UUID()
     let title: String

@@ -29,11 +29,11 @@ extension Season{
 
 extension TVShow{
     
-   static let previewTVShow = TVShow(title: "Viking", image: nil, not: 5, description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.viking)
+    static let previewTVShow = TVShow(title: "Viking", image: nil, not: [78, 100, 65, 90], description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.viking)
     
     static let previewsTVShow = [
-        TVShow(title: "Viking", image: nil, not: 5, description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.viking),
-        TVShow(title: "Peaky Blinders", image: nil, not: 5, description: "Série ce passant à l'époque de l'industrialisation racontant le récit d'un des gangs les plus connu d'Angleterre à cet époque", season: Season.peakyBlinders),
-        TVShow(title: "Stranger things", image: nil, not: 5, description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.strangerThings)
+        TVShow(title: "Viking", image: nil, not: [78, 100, 65, 90], description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.viking),
+        TVShow(title: "Peaky Blinders", image: nil, not: [78, 100, 65, 90], description: "Série ce passant à l'époque de l'industrialisation racontant le récit d'un des gangs les plus connu d'Angleterre à cet époque", season: Season.peakyBlinders),
+        TVShow(title: "Stranger things", image: nil, not: [78, 100, 65, 90], description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.strangerThings)
     ]
 }

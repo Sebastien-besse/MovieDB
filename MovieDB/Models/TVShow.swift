@@ -11,7 +11,7 @@ struct TVShow: Identifiable{
     let id = UUID()
     let title: String
     let image: URL?
-    let not: Int
+    let not: [Float]
     let description: String
     let season: [Season]?
 }

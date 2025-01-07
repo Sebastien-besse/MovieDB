@@ -18,31 +18,36 @@ struct TVShowCell: View {
     
     var colorNot: Color{
         switch averageNot{
-            case 0...50:
-               return .red
-            case 52...89:
-              return  .orange
-            case 90...100:
-               return .green
+        case 0...50:
+            return .red
+        case 52...89:
+            return  .orange
+        case 90...100:
+            return .green
         default: return.black
         }
-            
+        
     }
     
     var body: some View {
         HStack(spacing: 30){
-            if let image = tvShow.image{
-                AsyncImage(url: image)
-            }else{
+            
+            AsyncImage(url: tvShow.image) { image in
+                image
+                    .resizable()
+                    .frame(width: 110, height: 180)
+                    .aspectRatio(contentMode: .fill)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                
+            } placeholder: {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(Color(white: 0.7))
-                    .frame(maxWidth: 100, maxHeight: 130)
+                    .frame(width: 110, height: 180)
                     .overlay {
                         Image(systemName: "photo")
                             .font(.title)
                             .foregroundStyle(.black)
                     }
-                  
             }
             VStack(alignment: .leading){
                 HStack(){
@@ -51,27 +56,28 @@ struct TVShowCell: View {
                         .bold()
                         .foregroundStyle(.white)
                     Spacer()
-                        Circle()
-                            .stroke(colorNot.opacity(0.5), lineWidth: 6)
-                            .frame(maxWidth: 40)
-                            .overlay {
-                                Text("\(Int(averageNot))")
-                                    .font(.footnote)
-                                    .foregroundStyle(.white)
-                                    .bold()
-                                Circle()
-                                    .trim(from: 0, to: Double(averageNot)/100)
-                                    .stroke(colorNot, style: StrokeStyle(lineWidth: 6, lineCap: .round))
-                                    .rotationEffect(.degrees(-90))
-                                    .frame(maxWidth: 40)
-                            }
+                    Circle()
+                        .stroke(colorNot.opacity(0.5), lineWidth: 6)
+                        .frame(maxWidth: 40)
+                        .overlay {
+                            Text("\(Int(averageNot))")
+                                .font(.footnote)
+                                .foregroundStyle(.white)
+                                .bold()
+                            Circle()
+                                .trim(from: 0, to: Double(averageNot)/100)
+                                .stroke(colorNot, style: StrokeStyle(lineWidth: 6, lineCap: .round))
+                                .rotationEffect(.degrees(-90))
+                                .frame(maxWidth: 40)
+                        }
                     
                 }
                 Text(tvShow.description)
                     .foregroundStyle(.gray)
                     .lineLimit(5)
+                    .padding(.top, 0.8)
             }
-                
+            
         }
         .frame(maxWidth: .infinity)
         .padding()
@@ -81,6 +87,6 @@ struct TVShowCell: View {
 }
 
 #Preview {
-    TVShowCell(tvShow: TVShow.previewTVShow)
-        
+    TVShowCell(tvShow: TVShow.previewsTVShow[5])
+    
 }

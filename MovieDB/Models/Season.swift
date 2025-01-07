@@ -9,5 +9,5 @@ import Foundation
 struct Season: Identifiable{
     let id = UUID()
     let title: String
-    let Description: String
+    let description: String
 }

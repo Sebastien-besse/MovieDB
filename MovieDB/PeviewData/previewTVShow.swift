@@ -78,15 +78,15 @@ extension TVShow{
     static let previewTVShow = TVShow(title: "Viking", image: nil, not: [78, 100, 65, 90], description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.viking)
     
     static let previewsTVShow = [
-        TVShow(title: "Viking", image: URL(string: "https://i.pinimg.com/originals/05/3c/34/053c341838e4a28af8189e72b2b482a5.png"), not: [78, 100, 65, 90], description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.viking),
+        TVShow(title: "Viking", image: URL(string: "https://i.pinimg.com/originals/05/3c/34/053c341838e4a28af8189e72b2b482a5.png"), not: [88, 100, 95, 90], description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.viking),
         
-        TVShow(title: "Peaky Blinders", image: URL(string: "https://www.tallengestore.com/cdn/shop/products/PeakyBlinders-Season2-GillianMurphy-NetflixTVShow-ArtPoster_7278f9c0-3686-4c9c-9074-097ff21a3644.jpg?v=1619864586"), not: [78, 100, 65, 90], description: "Série ce passant à l'époque de l'industrialisation racontant le récit d'un des gangs les plus connu d'Angleterre à cet époque", season: Season.peakyBlinders),
+        TVShow(title: "Peaky Blinders", image: URL(string: "https://www.tallengestore.com/cdn/shop/products/PeakyBlinders-Season2-GillianMurphy-NetflixTVShow-ArtPoster_7278f9c0-3686-4c9c-9074-097ff21a3644.jpg?v=1619864586"), not: [92, 100, 90, 90], description: "Série ce passant à l'époque de l'industrialisation racontant le récit d'un des gangs les plus connu d'Angleterre à cet époque", season: Season.peakyBlinders),
         
         TVShow(title: "Stranger things", image: URL(string: "https://i.ebayimg.com/images/g/Z~4AAOSwcNtkwoW2/s-l1200.jpg"), not: [78, 100, 65, 90], description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.strangerThings),
         
-        TVShow(title: "Breaking Bad", image: URL(string: "https://images.affiches-et-posters.com//albums/3/5539/medium/affiche-serie-breaking-bad-3509.jpg"), not: [95, 85, 92, 88], description: "Série sur la descente dans le crime d'un professeur de chimie devenu baron de la drogue.", season: Season.breakingBad),
+        TVShow(title: "Breaking Bad", image: URL(string: "https://images.affiches-et-posters.com//albums/3/5539/medium/affiche-serie-breaking-bad-3509.jpg"), not: [65, 85, 92, 88], description: "Série sur la descente dans le crime d'un professeur de chimie devenu baron de la drogue.", season: Season.breakingBad),
 
-        TVShow(title: "The Witcher", image: URL(string: "https://fr.web.img3.acsta.net/r_1280_720/pictures/23/04/26/10/07/4623206.jpg"), not: [80, 70, 75, 90], description: "Adaptation des aventures de Geralt de Riv, un chasseur de monstres dans un univers fantastique.", season: Season.theWitcher),
+        TVShow(title: "The Witcher", image: URL(string: "https://fr.web.img3.acsta.net/r_1280_720/pictures/23/04/26/10/07/4623206.jpg"), not: [88, 95, 89, 90], description: "Adaptation des aventures de Geralt de Riv, un chasseur de monstres dans un univers fantastique.", season: Season.theWitcher),
 
         TVShow(title: "The Mandalorian", image: URL(string: "https://www.ecranlarge.com/content/uploads/2022/08/swgbv7lv2proqgkxwlibdgxkz1s-758.jpg"), not: [85, 88, 90, 92], description: "Dans l'univers de Star Wars, suivez les aventures d'un chasseur de primes solitaire.", season: Season.theMandalorian),
 

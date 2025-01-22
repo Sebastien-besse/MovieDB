@@ -8,10 +8,10 @@
 import Foundation
 
 struct TVShow: Identifiable{
-    let id = UUID()
+    let id : Int
     let title: String
     let image: URL?
-    let not: [Float]
+    let voteAverage: Double
     let description: String
     let season: [Season]?
 }

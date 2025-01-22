@@ -9,18 +9,14 @@ import SwiftUI
 
 struct TVShowCell: View {
     let tvShow : TVShow
-    
-    var averageNot: Float{
-        let sum = tvShow.not.reduce(0, +)
-        let average = (sum / Float(tvShow.not.count))
-        return average
+    var satisfaction : Int{
+        return Int(tvShow.voteAverage * 10)
     }
-    
     var colorNot: Color{
-        switch averageNot{
-        case 0...50:
+        switch satisfaction{
+        case 0...49:
             return .red
-        case 52...89:
+        case 50...89:
             return  .orange
         case 90...100:
             return .green
@@ -60,12 +56,12 @@ struct TVShowCell: View {
                         .stroke(colorNot.opacity(0.5), lineWidth: 6)
                         .frame(maxWidth: 40)
                         .overlay {
-                            Text("\(Int(averageNot))")
+                            Text("\(Int(tvShow.voteAverage*10))")
                                 .font(.footnote)
                                 .foregroundStyle(.white)
                                 .bold()
                             Circle()
-                                .trim(from: 0, to: Double(averageNot)/100)
+                                .trim(from: 0, to: tvShow.voteAverage/10)
                                 .stroke(colorNot, style: StrokeStyle(lineWidth: 6, lineCap: .round))
                                 .rotationEffect(.degrees(-90))
                                 .frame(maxWidth: 40)

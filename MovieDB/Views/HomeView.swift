@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
-    let tvShow = TVShow.previewsTVShow
+    let tvShowRepo = TVShowRepo()
+    @State private var items : [TVShow] = []
     var body: some View {
         NavigationStack{
             ScrollView{
                 VStack{
-                    ForEach(tvShow) { show in
-                        TVShowCell(tvShow: show)
+                    ForEach(items) { item in
+                        TVShowCell(tvShow: item)
                     }
                 }
             }
@@ -29,6 +30,21 @@ struct HomeView: View {
                 }
             }
             .toolbarBackground(.black, for: .navigationBar)
+        }
+        .onAppear{
+            Task{
+                self.items = []
+                do{
+                    let restItems = try await tvShowRepo.getTVShow()
+                    for restItem in restItems.results {
+                        let item = TVShowMapper().map(rest: restItem)
+                        items.append(item)
+                    }
+                }catch{
+                    print("\(error)")
+                }
+                
+            }
         }
     }
 }

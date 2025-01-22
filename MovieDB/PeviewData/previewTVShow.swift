@@ -73,26 +73,87 @@ extension Season{
         ]
     }
 
-extension TVShow{
-    
-    static let previewTVShow = TVShow(title: "Viking", image: nil, not: [78, 100, 65, 90], description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.viking)
+extension TVShow {
+    static let previewTVShow = TVShow(
+        id: 1,
+        title: "Viking",
+        image: nil,
+        voteAverage: 8.6,
+        description: "Série se passant à l'époque des Vikings racontant le récit du célèbre Ragnar Lodbrok",
+        season: Season.viking
+    )
     
     static let previewsTVShow = [
-        TVShow(title: "Viking", image: URL(string: "https://i.pinimg.com/originals/05/3c/34/053c341838e4a28af8189e72b2b482a5.png"), not: [88, 100, 95, 90], description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.viking),
+        TVShow(
+            id: 1,
+            title: "Viking",
+            image: URL(string: "https://i.pinimg.com/originals/05/3c/34/053c341838e4a28af8189e72b2b482a5.png"),
+            voteAverage: 9.3,
+            description: "Série se passant à l'époque des Vikings racontant le récit du célèbre Ragnar Lodbrok",
+            season: Season.viking
+        ),
         
-        TVShow(title: "Peaky Blinders", image: URL(string: "https://www.tallengestore.com/cdn/shop/products/PeakyBlinders-Season2-GillianMurphy-NetflixTVShow-ArtPoster_7278f9c0-3686-4c9c-9074-097ff21a3644.jpg?v=1619864586"), not: [92, 100, 90, 90], description: "Série ce passant à l'époque de l'industrialisation racontant le récit d'un des gangs les plus connu d'Angleterre à cet époque", season: Season.peakyBlinders),
+        TVShow(
+            id: 2,
+            title: "Peaky Blinders",
+            image: URL(string: "https://www.tallengestore.com/cdn/shop/products/PeakyBlinders-Season2-GillianMurphy-NetflixTVShow-ArtPoster_7278f9c0-3686-4c9c-9074-097ff21a3644.jpg?v=1619864586"),
+            voteAverage: 9.3,
+            description: "Série se passant à l'époque de l'industrialisation racontant le récit d'un des gangs les plus connus d'Angleterre à cette époque",
+            season: Season.peakyBlinders
+        ),
         
-        TVShow(title: "Stranger things", image: URL(string: "https://i.ebayimg.com/images/g/Z~4AAOSwcNtkwoW2/s-l1200.jpg"), not: [78, 100, 65, 90], description: "Série ce passant à l'époque des vikings racontant le récit du célébre Ragnar Lodbrok", season: Season.strangerThings),
+        TVShow(
+            id: 3,
+            title: "Stranger Things",
+            image: URL(string: "https://i.ebayimg.com/images/g/Z~4AAOSwcNtkwoW2/s-l1200.jpg"),
+            voteAverage: 8.3,
+            description: "Série explorant des phénomènes surnaturels et les aventures de jeunes adolescents dans une petite ville",
+            season: Season.strangerThings
+        ),
         
-        TVShow(title: "Breaking Bad", image: URL(string: "https://images.affiches-et-posters.com//albums/3/5539/medium/affiche-serie-breaking-bad-3509.jpg"), not: [65, 85, 92, 88], description: "Série sur la descente dans le crime d'un professeur de chimie devenu baron de la drogue.", season: Season.breakingBad),
+        TVShow(
+            id: 4,
+            title: "Breaking Bad",
+            image: URL(string: "https://images.affiches-et-posters.com//albums/3/5539/medium/affiche-serie-breaking-bad-3509.jpg"),
+            voteAverage: 8.3,
+            description: "Série sur la descente dans le crime d'un professeur de chimie devenu baron de la drogue.",
+            season: Season.breakingBad
+        ),
 
-        TVShow(title: "The Witcher", image: URL(string: "https://fr.web.img3.acsta.net/r_1280_720/pictures/23/04/26/10/07/4623206.jpg"), not: [88, 95, 89, 90], description: "Adaptation des aventures de Geralt de Riv, un chasseur de monstres dans un univers fantastique.", season: Season.theWitcher),
+        TVShow(
+            id: 5,
+            title: "The Witcher",
+            image: URL(string: "https://fr.web.img3.acsta.net/r_1280_720/pictures/23/04/26/10/07/4623206.jpg"),
+            voteAverage: 9.0,
+            description: "Adaptation des aventures de Geralt de Riv, un chasseur de monstres dans un univers fantastique.",
+            season: Season.theWitcher
+        ),
 
-        TVShow(title: "The Mandalorian", image: URL(string: "https://www.ecranlarge.com/content/uploads/2022/08/swgbv7lv2proqgkxwlibdgxkz1s-758.jpg"), not: [85, 88, 90, 92], description: "Dans l'univers de Star Wars, suivez les aventures d'un chasseur de primes solitaire.", season: Season.theMandalorian),
+        TVShow(
+            id: 6,
+            title: "The Mandalorian",
+            image: URL(string: "https://www.ecranlarge.com/content/uploads/2022/08/swgbv7lv2proqgkxwlibdgxkz1s-758.jpg"),
+            voteAverage: 8.9,
+            description: "Dans l'univers de Star Wars, suivez les aventures d'un chasseur de primes solitaire.",
+            season: Season.theMandalorian
+        ),
 
-        TVShow(title: "Game of Thrones", image: URL(string: "https://m.media-amazon.com/images/I/61W-KI4mR6L._AC_UF1000,1000_QL80_.jpg"), not: [70, 95, 88, 91], description: "Lutte pour le trône de fer dans un monde médiéval fantastique rempli de complots et de dragons.", season: Season.gameOfThrones),
+        TVShow(
+            id: 7,
+            title: "Game of Thrones",
+            image: URL(string: "https://m.media-amazon.com/images/I/61W-KI4mR6L._AC_UF1000,1000_QL80_.jpg"),
+            voteAverage: 8.6,
+            description: "Lutte pour le trône de fer dans un monde médiéval fantastique rempli de complots et de dragons.",
+            season: Season.gameOfThrones
+        ),
 
-        TVShow(title: "The Crown", image: URL(string: "https://www.ecranlarge.com/content/uploads/2022/10/snrhom9joy3i7ugndzbfbakiq4n-388.jpg"), not: [85, 5, 88, 10], description: "Série retraçant la vie et le règne de la reine Élisabeth II.", season: Season.theCrown)
-        
+        TVShow(
+            id: 8,
+            title: "The Crown",
+            image: URL(string: "https://www.ecranlarge.com/content/uploads/2022/10/snrhom9joy3i7ugndzbfbakiq4n-388.jpg"),
+            voteAverage: 4.7,
+            description: "Série retraçant la vie et le règne de la reine Élisabeth II.",
+            season: Season.theCrown
+        )
     ]
 }

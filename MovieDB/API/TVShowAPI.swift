@@ -7,9 +7,13 @@
 
 import Foundation
 
+
 // Les séries populaires
-let tvSeriePopular = URL(string: "https://api.themoviedb.org/3/tv/popular")!
+let tvSeriePopular = URL(string:"https://api.themoviedb.org/3/tv/popular?api_key=\(tokenAPI)")!
+
+
 // Les séries les mieux notées
 let tvSerieTopRated = URL(string: "https://api.themoviedb.org/3/tv/top_rated")!
 // Les séries en cours
 let tvSerieAiringToday =  URL(string: "https://api.themoviedb.org/3/tv/airing_today")!
+

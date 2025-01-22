@@ -9,28 +9,26 @@ import Foundation
 
 struct TVShowResponse: Decodable{
     let page: Int
-    let result: [TVShowRest]
+    let results: [TVShowRest]
 }
 
 struct TVShowRest: Decodable, Identifiable{
     
     let id: Int
+    let name: String
     let overview: String
     let popularity: Double
     let average: Double
-    let voteCount: Int
-    let poster: String?
-    let backdrop: String
+    let poster: String
    
     
     enum CodingKeys:String, CodingKey{
         case id
+        case name
         case overview
         case popularity
         case average = "vote_average"
-        case voteCount = "vote_count"
         case poster = "poster_path"
-        case backdrop = "backdrop_path"
     }
 }
 

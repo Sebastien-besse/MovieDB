@@ -31,7 +31,7 @@ struct ContentView: View {
             Button {
                 Task{
                     do{
-                       let restItems = try await tvShowRepo.getTVShow()
+                        let restItems = try await tvShowRepo.getTVShowAiring()
                         for restItem in restItems.results {
                             let item = TVShowMapper().map(rest: restItem)
                             items.append(item)

@@ -44,4 +44,50 @@ class TVShowRepo{
              
         }
     }
+    
+    func getTVShowTopRated() async throws -> TVShowResponse{
+        do{
+            let (data, response) = try await URLSession.shared.data(from: tvSerieTopRated)
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else{
+                throw TVShowError.httpResponseError
+            }
+            guard !data.isEmpty else{
+                throw TVShowError.dataEmpty
+            }
+            do{
+                let tvShowTopRest = try JSONDecoder().decode(TVShowResponse.self, from: data)
+                for result in tvShowTopRest.results {
+                    print("\(result.name)")
+                }
+                return tvShowTopRest
+            }
+        }catch{
+            print("\(error)")
+            throw TVShowError.urlSessionError
+        }
+        
+    }
+    
+    func getTVShowAiring() async throws -> TVShowResponse{
+        do{
+            let (data, response) = try await URLSession.shared.data(from: tvSerieAiringToday)
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else{
+                throw TVShowError.httpResponseError
+            }
+            guard !data.isEmpty else{
+                throw TVShowError.dataEmpty
+            }
+            do{
+                let tvShowAiringRest = try JSONDecoder().decode(TVShowResponse.self, from: data)
+                return tvShowAiringRest
+            }catch{
+                throw TVShowError.decodeError
+            }
+         
+        }catch{
+            print("\(error)")
+            throw TVShowError.urlSessionError
+        }
+        
+    }
 }

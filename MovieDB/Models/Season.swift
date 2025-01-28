@@ -7,7 +7,9 @@
 
 import Foundation
 struct Season: Identifiable{
-    let id = UUID()
-    let title: String
+    let id : Int
+    let name: String
+    let date: String
     let description: String
+    let image : URL?
 }

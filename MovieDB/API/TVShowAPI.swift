@@ -14,4 +14,5 @@ let tvSeriePopular = URL(string:"https://api.themoviedb.org/3/tv/popular?api_key
 let tvSerieTopRated = URL(string: "https://api.themoviedb.org/3/tv/top_rated?api_key=\(tokenAPI)")!
 // Les séries en cours
 let tvSerieAiringToday =  URL(string: "https://api.themoviedb.org/3/tv/airing_today?api_key=\(tokenAPI)")!
-
+// Détail d'une serie
+let tvSerieDetailBaseURL = URL(string: "https://api.themoviedb.org/3/tv/")!

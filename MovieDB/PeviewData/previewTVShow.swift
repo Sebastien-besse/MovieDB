@@ -8,76 +8,78 @@
 import Foundation
 
 extension Season{
-        static let strangerThings = [
-            Season(title: "Saison 1", description: "Une mystérieuse disparition d'enfant dévoile un monde secret."),
-            Season(title: "Saison 2", description: "Les monstres reviennent plus forts avec une nouvelle menace."),
-            Season(title: "Saison 3", description: "Un été à Hawkins qui tourne au cauchemar."),
-            Season(title: "Saison 4", description: "Une guerre entre deux mondes commence."),
-            Season(title: "Saison 5", description: "La conclusion épique d'une bataille interdimensionnelle.")
-        ]
-
-        static let viking = [
-            Season(title: "Saison 1", description: "Les débuts de Ragnar Lodbrok en tant que guerrier et explorateur."),
-            Season(title: "Saison 2", description: "Les ambitions grandissantes de Ragnar pour le pouvoir."),
-            Season(title: "Saison 3", description: "Les raids vikings atteignent de nouveaux territoires."),
-            Season(title: "Saison 4", description: "Les conflits internes menacent le règne de Ragnar."),
-            Season(title: "Saison 5", description: "Le destin des fils de Ragnar après sa disparition.")
-        ]
-
-        static let peakyBlinders = [
-            Season(title: "Saison 1", description: "L'ascension de la famille Shelby dans le Birmingham des années 1920."),
-            Season(title: "Saison 2", description: "Tommy Shelby étend son empire vers Londres."),
-            Season(title: "Saison 3", description: "Les Shelby s'impliquent dans des affaires internationales."),
-            Season(title: "Saison 4", description: "Une nouvelle menace met en danger la famille Shelby."),
-            Season(title: "Saison 5", description: "Tommy fait face à de nouvelles intrigues politiques et personnelles.")
-        ]
-
-        static let breakingBad = [
-            Season(title: "Saison 1", description: "Walter White commence son empire de la drogue."),
-            Season(title: "Saison 2", description: "Les affaires de Walter prennent de l'ampleur, mais les risques augmentent."),
-            Season(title: "Saison 3", description: "L'ascension de Heisenberg et les dangers qui l'accompagnent."),
-            Season(title: "Saison 4", description: "Les conflits atteignent leur paroxysme avec Gus Fring."),
-            Season(title: "Saison 5", description: "Le dénouement explosif de l'histoire de Walter White.")
-        ]
-
-        static let gameOfThrones = [
-            Season(title: "Saison 1", description: "La lutte pour le trône de fer commence."),
-            Season(title: "Saison 2", description: "Les royaumes s'affrontent dans une guerre sans merci."),
-            Season(title: "Saison 3", description: "Des alliances se forment et se brisent dans le chaos."),
-            Season(title: "Saison 4", description: "Les intrigues atteignent de nouveaux sommets."),
-            Season(title: "Saison 5", description: "Les forces du Nord et du Sud se préparent à un affrontement décisif.")
-        ]
     
-        static let theWitcher = [
-            Season(title: "Saison 1", description: "Geralt de Riv tente de trouver sa place dans un monde où les humains peuvent se montrer plus cruels que les monstres."),
-            Season(title: "Saison 2", description: "Geralt protège Ciri, tandis que de nouvelles menaces magiques et politiques émergent."),
-            Season(title: "Saison 3", description: "Les destins de Geralt, Yennefer et Ciri convergent alors que des forces puissantes les pourchassent."),
-            Season(title: "Saison 4", description: "La lutte pour le contrôle du continent atteint son apogée."),
-            Season(title: "Saison 5", description: "Geralt fait face à sa mission ultime pour sauver ceux qu'il aime.")
-        ]
+    static let previewTheWithcher = Season(id: 1, name: "Saison 1", date: "2009-02-21", description: "Geralt de Riv tente de trouver sa place dans un monde où les humains peuvent se montrer plus cruels que les monstres.", image: nil)
+    
+    static let strangerThings = [
+        Season(id: 1, name: "Saison 1", date: "2009-02-21", description: "Une mystérieuse disparition d'enfant dévoile un monde secret.", image: nil),
+        Season(id: 2, name: "Saison 2", date: "2009-02-21", description: "Les monstres reviennent plus forts avec une nouvelle menace.", image: nil),
+        Season(id: 3, name: "Saison 3", date: "2009-02-21", description: "Un été à Hawkins qui tourne au cauchemar.", image: nil),
+        Season(id: 4, name: "Saison 4", date: "2009-02-21", description: "Une guerre entre deux mondes commence.", image: nil),
+        Season(id: 5, name: "Saison 5", date: "2009-02-21", description: "La conclusion épique d'une bataille interdimensionnelle.", image: nil)
+    ]
 
-        static let theMandalorian = [
-            Season(title: "Saison 1", description: "Un chasseur de primes solitaire découvre un mystérieux enfant de la même espèce que Yoda."),
-            Season(title: "Saison 2", description: "Le Mandalorien cherche à protéger Grogu et à le réunir avec les siens."),
-            Season(title: "Saison 3", description: "Le voyage de Din Djarin le mène à de nouvelles alliances et menaces."),
-            Season(title: "Saison 4", description: "Les secrets de Mandalore sont révélés alors que le conflit s'intensifie."),
-            Season(title: "Saison 5", description: "Une bataille épique pour l'avenir de la galaxie se profile.")
-        ]
+    static let viking = [
+        Season(id: 1, name: "Saison 1", date: "2009-02-21", description: "Les débuts de Ragnar Lodbrok en tant que guerrier et explorateur.", image: nil),
+        Season(id: 2, name: "Saison 2", date: "2009-02-21", description: "Les ambitions grandissantes de Ragnar pour le pouvoir.", image: nil),
+        Season(id: 3, name: "Saison 3", date: "2009-02-21", description: "Les raids vikings atteignent de nouveaux territoires.", image: nil),
+        Season(id: 4, name: "Saison 4", date: "2009-02-21", description: "Les conflits internes menacent le règne de Ragnar.", image: nil),
+        Season(id: 5, name: "Saison 5", date: "2009-02-21", description: "Le destin des fils de Ragnar après sa disparition.", image: nil)
+    ]
 
-        static let theCrown = [
-            Season(title: "Saison 1", description: "La jeune reine Élisabeth II commence son règne et affronte ses premiers défis."),
-            Season(title: "Saison 2", description: "Les tensions au sein de la monarchie augmentent face à une époque en pleine mutation."),
-            Season(title: "Saison 3", description: "La Reine traverse les changements sociaux des années 1960 et 1970."),
-            Season(title: "Saison 4", description: "L'arrivée de Diana Spencer bouleverse la famille royale."),
-            Season(title: "Saison 5", description: "La monarchie est remise en question dans un monde moderne en plein essor.")
-        ]
-    }
+    static let peakyBlinders = [
+        Season(id: 1, name: "Saison 1", date: "2009-02-21", description: "L'ascension de la famille Shelby dans le Birmingham des années 1920.", image: nil),
+        Season(id: 2, name: "Saison 2", date: "2009-02-21", description: "Tommy Shelby étend son empire vers Londres.", image: nil),
+        Season(id: 3, name: "Saison 3", date: "2009-02-21", description: "Les Shelby s'impliquent dans des affaires internationales.", image: nil),
+        Season(id: 4, name: "Saison 4", date: "2009-02-21", description: "Une nouvelle menace met en danger la famille Shelby.", image: nil),
+        Season(id: 5, name: "Saison 5", date: "2009-02-21", description: "Tommy fait face à de nouvelles intrigues politiques et personnelles.", image: nil)
+    ]
+
+    static let breakingBad = [
+        Season(id: 1, name: "Saison 1", date: "2009-02-21", description: "Walter White commence son empire de la drogue.", image: nil),
+        Season(id: 2, name: "Saison 2", date: "2009-02-21", description: "Les affaires de Walter prennent de l'ampleur, mais les risques augmentent.", image: nil),
+        Season(id: 3, name: "Saison 3", date: "2009-02-21", description: "L'ascension de Heisenberg et les dangers qui l'accompagnent.", image: nil),
+        Season(id: 4, name: "Saison 4", date: "2009-02-21", description: "Les conflits atteignent leur paroxysme avec Gus Fring.", image: nil),
+        Season(id: 5, name: "Saison 5", date: "2009-02-21", description: "Le dénouement explosif de l'histoire de Walter White.", image: nil)
+    ]
+
+    static let gameOfThrones = [
+        Season(id: 1, name: "Saison 1", date: "2009-02-21", description: "Les royaumes s'affrontent dans une guerre sans merci.", image: nil),
+        Season(id: 2, name: "Saison 2", date: "2009-02-21", description: "Des alliances se forment et se brisent dans le chaos.", image: nil),
+        Season(id: 3, name: "Saison 3", date: "2009-02-21", description: "Les intrigues atteignent de nouveaux sommets.", image: nil),
+        Season(id: 4, name: "Saison 4", date: "2009-02-21", description: "Les forces du Nord et du Sud se préparent à un affrontement décisif.", image: nil)
+    ]
+    
+    static let theWitcher = [
+        Season(id: 1, name: "Saison 1", date: "2009-02-21", description: "Geralt de Riv tente de trouver sa place dans un monde où les humains peuvent se montrer plus cruels que les monstres.", image: nil),
+        Season(id: 2, name: "Saison 2", date: "2009-02-21", description: "Geralt protège Ciri, tandis que de nouvelles menaces magiques et politiques émergent.", image: nil),
+        Season(id: 3, name: "Saison 3", date: "2009-02-21", description: "Les destins de Geralt, Yennefer et Ciri convergent alors que des forces puissantes les pourchassent.", image: nil),
+        Season(id: 4, name: "Saison 4", date: "2009-02-21", description: "La lutte pour le contrôle du continent atteint son apogée.", image: nil),
+        Season(id: 5, name: "Saison 5", date: "2009-02-21", description: "Geralt fait face à sa mission ultime pour sauver ceux qu'il aime.", image: nil)
+    ]
+    
+    static let theMandalorian = [
+        Season(id: 1, name: "Saison 1", date: "2009-02-21", description: "Un chasseur de primes solitaire découvre un mystérieux enfant de la même espèce que Yoda.", image: nil),
+        Season(id: 2, name: "Saison 2", date: "2009-02-21", description: "Le Mandalorien cherche à protéger Grogu et à le réunir avec les siens.", image: nil),
+        Season(id: 3, name: "Saison 3", date: "2009-02-21", description: "Le voyage de Din Djarin le mène à de nouvelles alliances et menaces.", image: nil),
+        Season(id: 4, name: "Saison 4", date: "2009-02-21", description: "Les secrets de Mandalore sont révélés alors que le conflit s'intensifie.", image: nil),
+        Season(id: 5, name: "Saison 5", date: "2009-02-21", description: "Une bataille épique pour l'avenir de la galaxie se profile.", image: nil)
+    ]
+    
+    static let theCrown = [
+        Season(id: 1, name: "Saison 1", date: "2009-02-21", description: "La jeune reine Élisabeth II commence son règne et affronte ses premiers défis.", image: nil),
+        Season(id: 2, name: "Saison 2", date: "2009-02-21", description: "Les tensions au sein de la monarchie augmentent face à une époque en pleine mutation.", image: nil),
+        Season(id: 3, name: "Saison 3", date: "2009-02-21", description: "La Reine traverse les changements sociaux des années 1960 et 1970.", image: nil),
+        Season(id: 4, name: "Saison 4", date: "2009-02-21", description: "L'arrivée de Diana Spencer bouleverse la famille royale.", image: nil),
+        Season(id: 5, name: "Saison 5", date: "2009-02-21", description: "La monarchie est remise en question dans un monde moderne en plein essor.", image: nil)
+    ]
+}
 
 extension TVShow {
     static let previewTVShow = TVShow(
         id: 1,
         title: "Viking",
-        image: nil,
+        image: URL(string: "https://i.pinimg.com/originals/05/3c/34/053c341838e4a28af8189e72b2b482a5.png"),
         voteAverage: 8.6,
         description: "Série se passant à l'époque des Vikings racontant le récit du célèbre Ragnar Lodbrok",
         season: Season.viking
@@ -119,7 +121,7 @@ extension TVShow {
             description: "Série sur la descente dans le crime d'un professeur de chimie devenu baron de la drogue.",
             season: Season.breakingBad
         ),
-
+        
         TVShow(
             id: 5,
             title: "The Witcher",
@@ -128,7 +130,7 @@ extension TVShow {
             description: "Adaptation des aventures de Geralt de Riv, un chasseur de monstres dans un univers fantastique.",
             season: Season.theWitcher
         ),
-
+        
         TVShow(
             id: 6,
             title: "The Mandalorian",
@@ -137,7 +139,7 @@ extension TVShow {
             description: "Dans l'univers de Star Wars, suivez les aventures d'un chasseur de primes solitaire.",
             season: Season.theMandalorian
         ),
-
+        
         TVShow(
             id: 7,
             title: "Game of Thrones",
@@ -146,7 +148,7 @@ extension TVShow {
             description: "Lutte pour le trône de fer dans un monde médiéval fantastique rempli de complots et de dragons.",
             season: Season.gameOfThrones
         ),
-
+        
         TVShow(
             id: 8,
             title: "The Crown",

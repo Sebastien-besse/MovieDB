@@ -1,0 +1,3 @@
+# Ignorer le fichier token.txt dans le dossier API/Token
+MovieDB/API/TokenAuth/Authentification.txt
+.DS_Store

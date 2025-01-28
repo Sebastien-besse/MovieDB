@@ -57,7 +57,6 @@ struct ButtonFilter: View {
                             .stroke(.white, lineWidth: 2)
                     }
                 }
-            
         }
     }
 }

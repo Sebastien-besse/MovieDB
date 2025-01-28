@@ -1,19 +1,17 @@
 //
-//  TVShowCell.swift
+//  SeasonShowCell.swift
 //  MovieDB
 //
-//  Created by Sebastien Besse on 05/01/2025.
+//  Created by Sebastien Besse on 26/01/2025.
 //
 
 import SwiftUI
 
-struct TVShowCell: View {
-    
-    let tvShow : TVShow
-
+struct SeasonShowCell: View {
+    let season : Season
     var body: some View {
-        HStack(spacing: 30){
-            AsyncImage(url: tvShow.image) { image in
+        HStack(spacing: 20){
+            AsyncImage(url: season.image) { image in
                 image
                     .resizable()
                     .frame(width: 110, height: 180)
@@ -30,32 +28,31 @@ struct TVShowCell: View {
                             .foregroundStyle(.black)
                     }
             }
-            VStack(alignment: .leading){
+            VStack(alignment: .leading, spacing: 12){
                 HStack(){
-                    Text(tvShow.title)
-                        .font(.title2)
+                    Text(season.name)
+                        .font(.title3)
                         .bold()
                         .foregroundStyle(.white)
-                    Spacer()
-                    CircleVoteAverageCell(tvShow: tvShow)
                     
                 }
-                Text(tvShow.description)
+                Text(season.date)
+                    .foregroundStyle(.gray.opacity(0.8))
                     .font(.system(size: 14))
+                
+                
+                Text(season.description)
                     .foregroundStyle(.gray)
+                    .font(.system(size: 14))
                     .lineLimit(5)
-                    .padding(.top, 0.8)
             }
-            .multilineTextAlignment(.leading)
-
         }
-        .frame(maxWidth: .infinity)
-        .padding()
-        .background(Color.black)
     }
 }
 
 #Preview {
-    TVShowCell(tvShow: TVShow.previewsTVShow[2])
-    
+    SeasonShowCell(season: .previewTheWithcher)
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(Color.black)
 }

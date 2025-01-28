@@ -9,18 +9,25 @@ import SwiftUI
 
 struct HomeView: View {
     let tvShowRepo = TVShowRepo()
-    @State private var items : [TVShow] = []
-    @State private var selectedFilter : FilterType = .popular
+    @State private var items: [TVShow] = []
+    @State private var selectedFilter: FilterType = .popular
+    
     var body: some View {
-        NavigationStack{
-            VStack(spacing: 0){
+        NavigationStack {
+            VStack(spacing: 0) {
                 ButtonFilterView(selectedFilter: $selectedFilter)
                     .padding()
                     .background(Color.black)
-                ScrollView{
-                    VStack{
+                
+                ScrollView {
+                    VStack {
                         ForEach(items) { item in
-                            TVShowCell(tvShow: item)
+                            NavigationLink {
+                                TVShowDetailCell(movie: item)
+                                    
+                            } label: {
+                                TVShowCell(tvShow: item)
+                            }
                         }
                     }
                 }
@@ -39,32 +46,50 @@ struct HomeView: View {
                 .toolbarBackground(.black, for: .navigationBar)
             }
         }
-        .onAppear{
+        .onAppear {
             loadData(filter: selectedFilter)
         }
-        .onChange(of: selectedFilter){
+        .onChange(of: selectedFilter) {
             loadData(filter: selectedFilter)
         }
+        .accentColor(.white)
     }
-    private func loadData(filter: FilterType){
-        Task{
+    
+    private func loadData(filter: FilterType) {
+        Task {
             self.items = []
-            do{
-                let restItems : TVShowResponse
-                switch filter{
+            do {
+                let restItems: TVShowResponse
+                switch filter {
                 case .popular:
-                    restItems = try await tvShowRepo.getTVShow()
+                    restItems = try await tvShowRepo.getTVShowPopular()
                 case .rated:
                     restItems = try await tvShowRepo.getTVShowTopRated()
                 case .airing:
-                    restItems = try await tvShowRepo.getTVShowAiring()
+                    restItems = try await tvShowRepo.getTVShowAiringToday()
                 }
-                for restItem in restItems.results {
-                    let item = TVShowMapper().map(rest: restItem)
-                    items.append(item)
+                
+                let tvShows = restItems.results.map { TVShowMapper().map(rest: $0) }
+
+                DispatchQueue.main.async {
+                    self.items = tvShows
                 }
-            }catch{
-                print("\(error)")
+
+                for (index, show) in tvShows.enumerated() {
+                    Task {
+                        do {
+                            let detailResponse = try await tvShowRepo.getTVShowDetail(serieID: show.id)
+                            let seasons = detailResponse.seasons.map { TVShowDetailMapper().map(rest: $0) }
+                            DispatchQueue.main.async {
+                                self.items[index].season = seasons
+                            }
+                        } catch {
+                            print("Erreur lors du chargement des saisons pour \(show.title): \(error)")
+                        }
+                    }
+                }
+            } catch {
+                print("Erreur lors du chargement des séries: \(error)")
             }
         }
     }

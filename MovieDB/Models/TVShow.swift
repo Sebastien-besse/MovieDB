@@ -13,5 +13,5 @@ struct TVShow: Identifiable{
     let image: URL?
     let voteAverage: Double
     let description: String
-    let season: [Season]?
+    var season: [Season]?
 }
